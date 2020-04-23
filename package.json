@@ -1,0 +1,20 @@
+{
+  "name": "qqw-sitemap",
+  "version": "1.0.0",
+  "description": "Sitemap generator for QuienEsQuien.wiki",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@gitlab.rindecuentas.org:2203/equipo-qqw/qqw-sitemap.git"
+  },
+  "author": "PODER",
+  "license": "ISC",
+  "dependencies": {
+    "command-line-args": "^5.1.1",
+    "fs": "0.0.1-security",
+    "monk": "^7.2.0"
+  }
+}
