@@ -15,7 +15,13 @@ From the Linux command line, run the following commands:
 
 ## Usage
 
+First, generate all the sitemaps:
+
     node qqw-sitemap/index.js -d DATABASE
+
+Then, update the assets repo using the provided script:
+
+    ./push.sh
 
 ## Options
 
