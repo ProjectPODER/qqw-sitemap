@@ -22,7 +22,7 @@ if(!host) host = 'localhost';
 let port = args.port;
 if(!port) port = '27017';
 
-const url = 'mongodb://' + (args.host ? args.host : 'localhost') + ':' + (args.port ? args.port : '27017') + '/' + args.database;
+const url = 'mongodb://' + host + ':' + port + '/' + args.database;
 const db = monk(url)
 .then( (db) => {
     console.log('Connected to ' + args.database + '...');
