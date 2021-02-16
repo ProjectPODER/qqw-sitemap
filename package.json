@@ -1,6 +1,6 @@
 {
   "name": "qqw-sitemap",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Sitemap generator for QuienEsQuien.wiki",
   "main": "index.js",
   "scripts": {

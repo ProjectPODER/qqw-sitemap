@@ -1,4 +1,4 @@
-const { getPersonIDs, getCompanyIDs, getInstitutionIDs, getCountryIDs } = require('./lib/db');
+const { getPersonIDs, getCompanyIDs, getInstitutionIDs, getRegionIDs, getProductIDs } = require('./lib/db');
 const { buildSitemaps } = require('./lib/generator');
 const monk = require('monk');
 const fs = require('fs');
@@ -27,12 +27,13 @@ const db = monk(url)
 .then( (db) => {
     console.log('Connected to ' + args.database + '...');
 
-    let personPromise = getPersonIDs(db);
+    let personsPromise = getPersonIDs(db);
     let companiesPromise = getCompanyIDs(db);
     let institutionPromise = getInstitutionIDs(db);
-    let countryPromise = getCountryIDs(db);
+    let regionsPromise = getRegionIDs(db);
+    // let productsPromise = getProductIDs(db);
 
-    return Promise.all([personPromise, companiesPromise, institutionPromise, countryPromise]);
+    return Promise.all([personsPromise, companiesPromise, institutionPromise, regionsPromise]); // TODO: add productsPromise when available...
 } )
 .then( (results) => {
     let xmlFiles = buildSitemaps(results);
