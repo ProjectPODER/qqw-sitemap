@@ -13,7 +13,7 @@ git clone 'https://$GITHUB_USER:$GITHUB_PASS@github.com/ProjectPODER/qqw-generat
 # Replace sitemap files with newly generated ones
 cd qqw-generated-assets
 rm -f *.xml
-cp ../*.xml .
+cp $POPPINS_SCRIPTS_DIR/qqw-sitemap/*.xml .
 
 # Commit and push
 git add .
