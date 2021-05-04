@@ -8,7 +8,7 @@ echo Current Date and Time is: ${CURRENTDATE}
 # Start from scratch
 rm -rf qqw-generated-assets
 mkdir qqw-generated-assets
-git clone https://$GITHUB_USER:$GITHUB_PASS@github.com/ProjectPODER/qqw-generated-assets.git
+git clone 'https://$GITHUB_USER:$GITHUB_PASS@github.com/ProjectPODER/qqw-generated-assets.git'
 
 # Replace sitemap files with newly generated ones
 cd qqw-generated-assets
