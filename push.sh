@@ -8,14 +8,17 @@ echo Current Date and Time is: ${CURRENTDATE}
 # Start from scratch
 rm -rf qqw-generated-assets
 mkdir qqw-generated-assets
-git clone 'https://$GITHUB_USER:$GITHUB_PASS@github.com/ProjectPODER/qqw-generated-assets.git'
+git clone "https://$GITHUB_USER:$GITHUB_PASS@github.com/ProjectPODER/qqw-generated-assets.git"
+echo Cloned generated assets
 
 # Replace sitemap files with newly generated ones
 cd qqw-generated-assets
 rm -f *.xml
 cp $POPPINS_SCRIPTS_DIR/qqw-sitemap/*.xml .
+echo Copied files to repo
 
 # Commit and push
 git add .
 git commit -am "${CURRENTDATE}"
-git push https://$GITHUB_USER:$GITHUB_PASS@github.com/ProjectPODER/qqw-generated-assets.git --all
+git "push https://$GITHUB_USER:$GITHUB_PASS@github.com/ProjectPODER/qqw-generated-assets.git" --all
+echo Pushed repo
