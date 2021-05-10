@@ -31,9 +31,9 @@ const db = monk(url)
     let companiesPromise = getCompanyIDs(db);
     let institutionPromise = getInstitutionIDs(db);
     let regionsPromise = getRegionIDs(db);
-    // let productsPromise = getProductIDs(db);
+    let productsPromise = getProductIDs(db);
 
-    return Promise.all([personsPromise, companiesPromise, institutionPromise, regionsPromise]); // TODO: add productsPromise when available...
+    return Promise.all([personsPromise, companiesPromise, institutionPromise, regionsPromise, productsPromise]);
 } )
 .then( (results) => {
     let xmlFiles = buildSitemaps(results);
